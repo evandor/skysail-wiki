@@ -10,8 +10,7 @@ For this example, let's assume we want to create a new skysail application which
 
 ### Creating the project
 
-In eclipse, in the package explorer, right-click and choose "New" > "Bndtools OSGi Project". Leave the defaults, name it "skysail.server.app.music". On the next page, select "Empty Project" as
-Project Template. Click finish.
+In eclipse, in the package explorer, right-click and choose *New* > *Bndtools OSGi Project*. Leave the defaults, name it *skysail.server.app.music*. On the next page, select *Empty Project* as Project Template. Click finish.
 
 
 
