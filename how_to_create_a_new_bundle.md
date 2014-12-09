@@ -18,7 +18,6 @@ Open the bnd.bnd file and edit it so that it looks like this:
 Bundle-Name: SKYSAIL :: server :: app :: music
 Bundle-Version: 0.0.1.${tstamp}
 Service-Component: *
-Include-Resource: resources, templates=src;recursive:=true;filter:=*.st|*.stg
 -buildpath: biz.aQute.bnd.annotation,\
 	skysail.api;version=${skysail.api.version},\
 	skysail.server;version=${skysail.server.version},\
@@ -47,14 +46,23 @@ public class MusicApplication extends SkysailApplication implements ApplicationP
 	}
 
 	@Override
-	     protected void attach() {
-	       
-	     }
+    protected void attach() {
+    }
 
 	public List<MenuItem> getMenuEntries() {
-		MenuItem appMenu = new MenuItem("<Name>", "/<path>");
+		MenuItem appMenu = new MenuItem("Music Player", "/music");
 		appMenu.setCategory(MenuItem.Category.APPLICATION_MAIN_MENU);
 		return Arrays.asList(appMenu);
 	}
 }
 ```
+We will fill the *attach* method later on.
+
+For now, make sure that the new package will be added to the generated jar by opening the bnd file, switching to the *Content* tab and drag-and-dropping the source folder into
+the *Private Packages* section. Save and verify that you got a 	jar file in the *generated* folder with the following contents:
+
+to be done
+
+
+
+
