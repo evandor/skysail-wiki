@@ -15,7 +15,7 @@ In eclipse, in the package explorer, right-click and choose *New* > *Bndtools OS
 Open the bnd.bnd file and edit it so that it looks like this:
 
 ```
-Bundle-Name: SKYSAIL :: server :: app :: wiki
+Bundle-Name: SKYSAIL :: server :: app :: music
 Bundle-Version: 0.0.1.${tstamp}
 Service-Component: *
 Include-Resource: resources, templates=src;recursive:=true;filter:=*.st|*.stg
@@ -32,4 +32,29 @@ Import-Package: org.osgi.framework,\
 	*
 ```
 
+### Creating the application
 
+In the new projet create a class called *MusicApplication* in a package of your choice, looking like this:
+
+```
+@aQute.bnd.annotation.component.Component(immediate = true)
+public class MusicApplication extends SkysailApplication implements ApplicationProvider, MenuItemProvider {
+
+	private static final String APP_NAME = "music";
+
+	public MusicApplication() {
+		super(APP_NAME);
+	}
+
+	@Override
+	     protected void attach() {
+	       
+	     }
+
+	public List<MenuItem> getMenuEntries() {
+		MenuItem appMenu = new MenuItem("<Name>", "/<path>");
+		appMenu.setCategory(MenuItem.Category.APPLICATION_MAIN_MENU);
+		return Arrays.asList(appMenu);
+	}
+}
+```
