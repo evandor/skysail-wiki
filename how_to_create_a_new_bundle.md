@@ -25,7 +25,9 @@ Service-Component: *
 	org.restlet;version=${restlet.version},\
 	skysail.server.app.i18n;version=latest,\
 	javax.validation.api;version=1.1,\
-	javax.persistence;version=2.1
+	javax.persistence;version=2.1,\
+	com.springsource.org.junit;version=4.11,\
+	de.twentyeleven.skysail.org.hamcrest.hamcrest-all-osgi;version=1.3
 Import-Package: org.osgi.framework,\
 	javassist.util.proxy,\
 	*
