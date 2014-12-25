@@ -28,6 +28,7 @@ Service-Component: *
 	javax.persistence;version=2.1,\
 	com.springsource.org.junit;version=4.11,\
 	de.twentyeleven.skysail.org.hamcrest.hamcrest-all-osgi;version=1.3,\
+	lombok;version=1.12,\
 	etm.core;version=1.2
 Import-Package: org.osgi.framework,\
 	javassist.util.proxy,\
