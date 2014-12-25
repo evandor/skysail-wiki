@@ -2,7 +2,7 @@
 
 ### Assumptions
 
-This How-to assumes that you have set up eclipse with bndtools and checkout the set of skysail projects.
+This How-to assumes that you have set up eclipse with bndtools and checked out the set of skysail projects.
 
 ### Example
 
@@ -35,7 +35,7 @@ Import-Package: org.osgi.framework,\
 
 ### Creating the application
 
-In the new projet create a class called *MusicApplication* in a package of your choice, looking like this:
+In the new project create a class called *MusicApplication* in a package of your choice, looking like this:
 
 ```
 @aQute.bnd.annotation.component.Component(immediate = true)
@@ -64,6 +64,11 @@ For now, make sure that the new package will be added to the generated jar by op
 the *Private Packages* section. Save and verify that you got a 	jar file in the *generated* folder with the following contents:
 
 to be done
+
+#### Testing
+
+Add the new bundle to a running skysail installation (see here (tbd)); you should find a new entry in the *Applications* menu; clicking on it, though, will give you a *404 Not Found* error, as there are no routes defined yet which will deal with requests to this application.
+
 
 
 
