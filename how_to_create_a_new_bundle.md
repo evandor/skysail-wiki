@@ -65,9 +65,18 @@ the *Private Packages* section. Save and verify that you got a 	jar file in the 
 
 to be done
 
-#### Testing
+#### Testing the new application
 
-Add the new bundle to a running skysail installation (see here (tbd)); you should find a new entry in the *Applications* menu; clicking on it, though, will give you a *404 Not Found* error, as there are no routes defined yet which will deal with requests to this application.
+Add the new bundle to a running skysail installation (see here (tbd)); you should find a new entry in the *Applications* menu; clicking on it, though, will give you a *404 Not Found* error, as there are no routes defined yet which will deal with requests to this application. So, let's create such a route.
+
+### A first route in our new application
+
+Routes are specific classes which are connected to URI-patterns, meaning that accessing a matching URI will route the request to the attached class. To be more specific: 
+
+Let's define a URI-pattern like this
+
+
+
 
 
 
