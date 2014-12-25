@@ -27,7 +27,8 @@ Service-Component: *
 	javax.validation.api;version=1.1,\
 	javax.persistence;version=2.1,\
 	com.springsource.org.junit;version=4.11,\
-	de.twentyeleven.skysail.org.hamcrest.hamcrest-all-osgi;version=1.3
+	de.twentyeleven.skysail.org.hamcrest.hamcrest-all-osgi;version=1.3,\
+	etm.core;version=1.2
 Import-Package: org.osgi.framework,\
 	javassist.util.proxy,\
 	*
