@@ -7,3 +7,8 @@ In the bnd file, you have to add the top-level resource folder to the list of in
 ```
 Include-Resource: resources
 ```
+If you want to override the default templates, you'll have to define something like this:
+
+```
+Include-Resource: resources, templates=src;recursive:=true;filter:=*.st|*.stg
+```
