@@ -35,18 +35,18 @@ The annotation itself will look something like this:
 As you can see in the code snippet above, we are referencing a class *PasswordsMatchValidator*, 
 which will do the actual validation:
 
-    public class PasswordsMatchValidator implements ConstraintValidator<PasswordsMatch, Registrationon> {
+    public class PasswordsMatchValidator implements ConstraintValidator<PasswordsMatch, Password> {
     
         @Override
         public void initialize(PasswordsMatch passwordParameters) {
         }
 
         @Override
-        public boolean isValid(Registration registration,ConstraintValidatorContext arg1) {
-            if (registration.getPassword() == null && registration.getPwdRepeated() == null) {
+        public boolean isValid(Password p,ConstraintValidatorContext arg1) {
+            if (p.getPassword() == null && p.getPwdRepeated() == null) {
                 return true;
             }
-            return registration.getPassword().equals(registration.getPwdRepeated());
+            return p.getPassword().equals(p.getPwdRepeated());
         }
     }
 
