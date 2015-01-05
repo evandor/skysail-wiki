@@ -6,4 +6,5 @@
 * [How to... manage text and translations](how_to_manage_text_and_translations.md)
 * [how to... create custom validations](how_to_create_custom_validations.md)
 * [how to... setup your IDE](how_to_setup_your_ide.md)
+* Getting started
 
