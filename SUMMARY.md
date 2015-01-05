@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [how to... setup your IDE](how_to_setup_your_ide.md)
 * Getting started
+* [how to... setup your IDE](how_to_setup_your_ide.md)
 * [About](about.md)
 * [How to... create a new bundle](how_to_create_a_new_bundle.md)
 * [How to... manage text and translations](how_to_manage_text_and_translations.md)
