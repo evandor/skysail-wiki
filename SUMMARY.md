@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* Getting started
+* [Getting started](getting_started.md)
 * [how to... setup your IDE](how_to_setup_your_ide.md)
 * [About](about.md)
 * [How to... create a new bundle](how_to_create_a_new_bundle.md)
