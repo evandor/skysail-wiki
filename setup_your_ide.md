@@ -15,3 +15,7 @@ Create a new workspace (yes, new!).
 Start the eclipse marketplace (in the Help menu) and search for "bndtools". Install the Bndtools 2.4.0.REL (or greater) version from "Neil Bartlett and others".
 
 Restart.
+
+### Lombok
+
+skysail uses [lombok](http://www.projectlombok.org) to reduce some of the typical java boilerplate code. Though you don't need lombok to write skysail plugins, if you want to compile the skysail framework code, you'll have to install it.
