@@ -1,11 +1,9 @@
-# Services
+# Validation Service
 
-## Validation Service
-
-### Interface
+## Interface
 
 io.skysail.api.validation.ValidatorService in bundle skysail.api.validation.
 
-### Implementations
+## Implementations
 
 io.skysail.api.validation.hibernate.DefaultValidationImpl in skysail.api.validation.
