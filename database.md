@@ -1,4 +1,8 @@
 # Database Configuration
 
-In a skysail application, you'll typically find a folder called "config", potentially with subfolders for different stages, which contains the applications configuration data inside a couple of files with a "cfg" Suffix.
+The database configuration can be found in the file(s) with a name like  io.skysail.server.db.DbConfigurations-&lt;name&gt;.cfg. A typical file will look like this:
+
+    name=skysail
+    url = memory:website
+
 
