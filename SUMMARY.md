@@ -14,6 +14,7 @@
    * [RenderService](renderservice.md)
    * [User Management Service](user_management_service.md)
    * Search Service
+   * Persistence Serivce
 * [Configuration](configuration.md)
    * [Database](database.md)
 * [How to... create a new bundle](how_to_create_a_new_bundle.md)
