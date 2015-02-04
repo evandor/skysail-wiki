@@ -5,4 +5,4 @@ The database configuration can be found in the file(s) with a name like  io.skys
     name=skysail
     url = memory:website
 
-
+This configuration will be used by the Database Service.
