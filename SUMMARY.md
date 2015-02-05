@@ -4,8 +4,8 @@
 * [Getting started](getting_started.md)
    * [setup your IDE](setup_your_ide.md)
    * [setup gradle](setup_gradle.md)
-   * [clone repository](clone_skysail_framework_repository.md)
    * Tutorial - Create a new skysail application
+   * [clone repository](clone_skysail_framework_repository.md)
 * [About](about.md)
 * [Services](services.md)
    * [Validation Service](validation_service.md)
