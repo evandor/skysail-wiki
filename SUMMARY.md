@@ -7,7 +7,8 @@
    * [Tutorial - Create a new skysail application](tutorial_-_create_a_new_skysail_application.md)
    * [clone repository](clone_skysail_framework_repository.md)
 * [About](about.md)
-   * Concepts
+* [Concepts](concepts.md)
+   * [Resources](resources.md)
 * [Services](services.md)
    * [Validation Service](validation_service.md)
    * [Configuration Service](configuration_service.md)
