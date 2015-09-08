@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* Concepts
+* [Concepts](concepts/concepts.md)
 
