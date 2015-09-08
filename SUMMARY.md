@@ -1,12 +1,12 @@
 # Summary
 
 * [Introduction](README.md)
+* [About](about.md)
 * [Getting started](getting_started.md)
    * [setup your IDE](setup_your_ide.md)
    * [setup gradle](setup_gradle.md)
    * [Tutorial - Create a new skysail application](tutorial_-_create_a_new_skysail_application.md)
    * [clone repository](clone_skysail_framework_repository.md)
-* [About](about.md)
 * [Services](services.md)
    * [Validation Service](validation_service.md)
    * [Configuration Service](configuration_service.md)
