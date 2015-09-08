@@ -7,6 +7,7 @@
    * [Tutorial - Create a new skysail application](tutorial_-_create_a_new_skysail_application.md)
    * [clone repository](clone_skysail_framework_repository.md)
 * [About](about.md)
+   * Concepts
 * [Services](services.md)
    * [Validation Service](validation_service.md)
    * [Configuration Service](configuration_service.md)
@@ -15,7 +16,6 @@
    * [RenderService](renderservice.md)
    * [User Management Service](user_management_service.md)
    * Search Service
-   * Concepts
 * [Configuration](configuration.md)
    * [Database](database.md)
 * [How to... create a new bundle](how_to_create_a_new_bundle.md)
