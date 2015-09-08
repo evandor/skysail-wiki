@@ -8,7 +8,7 @@
    * [clone repository](clone_skysail_framework_repository.md)
 * [About](about.md)
 * [Concepts](concepts.md)
-   * [Resources](resources.md)
+   * [Resources](resourcesmd.md)
 * [Services](services.md)
    * [Validation Service](validation_service.md)
    * [Configuration Service](configuration_service.md)
