@@ -4,7 +4,7 @@ skysail provides a way to **customise the created html pages**, so that you are 
 
 The same approach can be used both for providing custom content and internationalisation \(i18n\).
 
-A **key concept** for this is the utilisation of \(possible multiple\) **TranslationStores** \(to retrieve translations from\) and \(zero or more\) **TranslationRenderService**s \(to format the translations\). 
+A **key concept** for this is the utilisation of \(possible multiple\) **TranslationStores** \(to retrieve translations from\) and \(zero or more\) **TranslationRenderService**s \(to format the translations\).
 
 ## Relevant Bundles
 
@@ -46,9 +46,7 @@ A factory method to get a Translation for a given key providing a defaultMessage
 
 ##### Map&lt;String, Translation&gt; SkysailServerResource.getMessages\(Map&lt;String, FormField&gt;\) &lt;&lt;Method&gt;&gt;
 
-Rendering a SkysailResource triggers the translation of all FormField - annotated fields of the associated Entity \(-ies\). 
-
-
+Rendering a SkysailResource triggers the translation of all FormField - annotated fields of the associated Entity \(-ies\).
 
 # Usage
 
