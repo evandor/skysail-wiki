@@ -1,13 +1,15 @@
 # Content and Translations
 
-skysail provides a way to **customise the created html pages**, so that you are able to add specific information for the user about the current page's content and purpose. Although the approach of creating skysail pages is very generic and the layout is kind of fixed, using this kind of customisation let's you create very specific content. 
+skysail provides a way to **customise the created html pages**, so that you are able to add specific information for the user about the current page's content and purpose. Although the approach of creating skysail pages is very generic and the layout is kind of fixed, using this kind of customisation let's you create very specific content.
 
 The same approach can be used both for providing custom content and internationalisation \(i18n\).
 
 ## Relevant Bundles
 
 * **skysail.api** - interface definitions and Noop Implementations.
-* 
+* **skysail.server.text.store.bundleresource** - provides a TranslationStore based on property files inside bundles.
+* **skysail.server.text.markdown** - provides a translationRenderServices based on markdown.
+
 # Core Interfaces and Implementations
 
 ##### Translation \(io.skysail.api.text\)
@@ -32,13 +34,5 @@ A specific TranslationRenderService, using markdown syntax.
 
 # Usage
 
-If you extend a [SkysailApplication](https://github.com/evandor/skysail/blob/master/skysail.server/src/io/skysail/core/app/SkysailApplication.java), you can use the method getMetricsCollector\(\) and use it like this to create a timer metric:
 
-```
-TimerMetric timerMetric = getMetricsCollector().timerFor(this.getClass(), "getEntities");
-List<T> response = listEntities();
-timerMetric.stop();
-```
-
-Other metric types can be used accordingly.
 
