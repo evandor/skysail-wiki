@@ -2,9 +2,11 @@
 
 skysail provides a way to **customise the created html pages**, so that you are able to add specific information for the user about the current page's content and purpose. Although the approach of creating skysail pages is very generic and the layout is kind of fixed, using this kind of customisation let's you create very specific content.
 
-The same approach can be used both for providing custom content and internationalisation \(i18n\).
+The same approach can be used both for providing **custom content **and **internationalisation** \(i18n\).
 
 A **key concept** for this is the utilisation of \(possible multiple\) **TranslationStores** \(to retrieve translations from\) and \(zero or more\) **TranslationRenderService**s \(to format the translations\).
+
+Furthermore, skysail tries to make it easy for the creator of an application to create/alter these translations, so there is a specific _GUI Mode_ to 
 
 ## Relevant Bundles
 
@@ -42,7 +44,7 @@ A specific TranslationRenderService, using markdown syntax.
 
 ##### Translation SkysailApplication\#translate\(key, defaultMessage, skysailServerResource\) &lt;&lt;Method&gt;&gt;
 
-A factory method to get a Translation for a given key providing a defaultMessage if not found.
+A factory method to get a _Translation_ for a given key providing a defaultMessage if not found.
 
 ##### Map&lt;String, Translation&gt; SkysailServerResource.getMessages\(Map&lt;String, FormField&gt;\) &lt;&lt;Method&gt;&gt;
 
