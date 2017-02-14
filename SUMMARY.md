@@ -10,6 +10,7 @@
   * [Content and Translations](services/content-and-translations.md)
     * [Stores](services/content-and-translations/stores.md)
       * [bundleresource](services/content-and-translations/stores/bundleresource.md)
+      * [InMemoryStore](services/content-and-translations/stores/inmemorystore.md)
   * [Metrics](metrics.md)
 * [Configuration](configuration.md)
   * [Landing Pages](configuration/landing-pages.md)

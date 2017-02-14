@@ -54,22 +54,22 @@ Rendering a SkysailResource triggers the translation of all FormField - annotate
 
 There's two things you might want to do with translations: _retrieve_ them, given a key \(and context dependent information like Headers and Locale\). Or set/update them, if you have the permissions and access to the relevant files.
 
-### Translation retrieval 
+### Translation retrieval
 
-The core logic is contained in the method 
+The core logic is contained in the method
 
 io.skysail.core.app.SkysailApplication.translate\(key, defaultMessage, SkysailServerResource\).
 
 What happens here is described in the following steps:
 
 1. If there is no _ServiceListProvider_ available, return a translation based on the defaultMessage.
-2. Otherwise, get the best translation from the available TranslationStores. If there is no such thing, return a translation based on the defaultMessage like before.
+2. Otherwise, get the best translation \(see below\) from the available TranslationStores. If there is no such thing, return a translation based on the defaultMessage like before.
 3. Given a translation, check the rendererServices to render the translation and return it.
 4. If the translation was not retrieved from the InMemoryStore, persist it there for faster subsequent retrieval.
 
+##### Best translation
 
-
-
+So, what's the best translation? 
 
 
 
