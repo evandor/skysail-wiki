@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Conventions](conventions.md)
 * [Concepts](concepts/concepts.md)
   * [Domain and Business Logic](concepts/concepts/domain-and-business-logic.md)
     * [Annotations](concepts/concepts/domain-and-business-logic/annotations.md)
