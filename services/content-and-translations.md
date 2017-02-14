@@ -6,7 +6,7 @@ The same approach can be used both for providing **custom content **and **intern
 
 A **key concept** for this is the utilisation of \(possible multiple\) **TranslationStores** \(to retrieve translations from\) and \(zero or more\) **TranslationRenderService**s \(to format the translations\).
 
-Furthermore, skysail tries to make it easy for the creator of an application to create/alter these translations, so there is a specific _GUI Mode_ to 
+Furthermore, skysail tries to make it easy for the creator of an application to create/alter these translations, so there is a specific _GUI Mode_ to
 
 ## Relevant Bundles
 
@@ -20,7 +20,7 @@ Furthermore, skysail tries to make it easy for the creator of an application to 
 
 ##### Translation \(io.skysail.api.text\) &lt;&lt;Class&gt;&gt;
 
-Defines a Translation object \(which is the result of looking up a key and finding a translation for it\). There might be various Translations for a given key, e.g. differing by _Locale_ or _Store _\(see next section\) they were retrieved from.
+Defines a _Translation_ object \(which is the result of looking up a key and finding a translation for it\). There might be various Translations for a given key, e.g. differing by _Locale_ or _Store _\(see next section\) they were retrieved from.
 
 ##### TranslationStore \(io.skysail.api.text\) &lt;&lt;Interface&gt;&gt;
 
@@ -51,6 +51,25 @@ A factory method to get a _Translation_ for a given key providing a defaultMessa
 Rendering a SkysailResource triggers the translation of all FormField - annotated fields of the associated Entity \(-ies\).
 
 # Usage
+
+There's two things you might want to do with translations: _retrieve_ them, given a key \(and context dependent information like Headers and Locale\). Or set/update them, if you have the permissions and access to the relevant files.
+
+### Translation retrieval 
+
+The core logic is contained in the method 
+
+io.skysail.core.app.SkysailApplication.translate\(key, defaultMessage, SkysailServerResource\).
+
+What happens here is described in the following steps:
+
+1. If there is no _ServiceListProvider_ available, return a translation based on the defaultMessage.
+2. Otherwise, get the best translation from the available TranslationStores. If there is no such thing, return a translation based on the defaultMessage like before.
+3. Given a translation, check the rendererServices to render the translation and return it.
+4. If the translation was not retrieved from the InMemoryStore, persist it there for faster subsequent retrieval.
+
+
+
+
 
 
 

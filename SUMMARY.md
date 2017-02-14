@@ -8,6 +8,8 @@
       * [Field](concepts/concepts/domain-and-business-logic/annotations/field.md)
 * [Services](services.md)
   * [Content and Translations](services/content-and-translations.md)
+    * [Stores](services/content-and-translations/stores.md)
+      * [bundleresource](services/content-and-translations/stores/bundleresource.md)
   * [Metrics](metrics.md)
 * [Configuration](configuration.md)
   * [Landing Pages](configuration/landing-pages.md)
