@@ -8,6 +8,8 @@
       * [Field](concepts/concepts/domain-and-business-logic/annotations/field.md)
   * [Request Processing](concepts/concepts/request-processing.md)
     * [PUT](concepts/concepts/request-processing/put.md)
+    * [Filtering](concepts/concepts/request-processing/filtering.md)
+      * [ExceptionCatchingFilter](concepts/concepts/request-processing/filtering/exceptioncatchingfilter.md)
 * [Services](services.md)
   * [Content and Translations](services/content-and-translations.md)
     * [Stores](services/content-and-translations/stores.md)
