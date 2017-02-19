@@ -1,6 +1,6 @@
 # PUT Requests
 
-Typically, an endpoint for PUT requests is build up like this: 
+Typically, an endpoint for PUT requests is build up like this:
 
 ```
 /<application>/<applicationVersion>/<entityName Plural>/<entity id>/
@@ -44,9 +44,12 @@ public class PutNoteResource extends PutEntityServerResource<Note> {
 }
 ```
 
-The _PutNoteResource_ classes purpose is to 
+The _PutNoteResource_ classes purpose is to
 
-* provide the concrete entity for the id taken from the request url
-* 
+* provide the concrete entity for the id taken from the url \(GET request\)
+* update the entity defined by the id in the URL \(PUT request\)
+
+* define the redirect url \(where you will be redirected after a successful PUT request\)
+
 
 
