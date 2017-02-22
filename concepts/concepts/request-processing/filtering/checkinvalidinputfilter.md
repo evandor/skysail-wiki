@@ -2,8 +2,6 @@
 
 ### Purpose
 
-
-
 ##### beforeHandle
 
 ```java
@@ -12,7 +10,7 @@ default
 
 ##### doHandle
 
-```java
+```
 
 ```
 
