@@ -1,21 +1,21 @@
-# PUT Requests
+# POST Requests
 
-Typically, an endpoint for PUT requests is build up like this:
+Typically, an endpoint for POST requests is build up like this:
 
 ```
-/<application>/<applicationVersion>/<entityName Plural>/<entity id>/
+/<application>/<applicationVersion>/<entityName Plural>/
 ```
 
 For example
 
 ```
-/mynotesApp/v1/notes/17/
+/mynotesApp/v1/notes/
 ```
 
 The actual class dealing with the request is derived from _PutEntityServerResource_ and could look something like this:
 
 ```java
-public class PutNoteResource extends PutEntityServerResource<Note> {
+public class PutNoteResource extends PostEntityServerResource<Note> {
 
     private String id;
     private NotesApplication app;
@@ -26,15 +26,14 @@ public class PutNoteResource extends PutEntityServerResource<Note> {
     }
 
     @Override
-    public void updateEntity(Note  entity) {
-        Note original = getEntity();
-        copyProperties(original,entity);
-        app.getRepository().update(original,null);
+    public Note createEntityTemplate() {
+        return new Note();
     }
 
+
     @Override
-    public Note getEntity() {
-        return app.getRepository().findOne(getAttribute("id"));
+    public void addEntity(Note entity) {
+        ...
     }
 
     @Override
@@ -44,55 +43,55 @@ public class PutNoteResource extends PutEntityServerResource<Note> {
 }
 ```
 
-The _PutNoteResource_ classes purpose is to
+The _PostNoteResource_ classes purpose is to
 
-* provide the concrete entity for the id taken from the url \(GET request\)
-* update the entity defined by the id in the URL \(PUT request\)
+* provide an entity template which can be used for the POST request \(GET request\)
+* create a new entity \(POST request\) the id of which is defined by the backend
 
-* define the redirect url \(where you will be redirected after a successful PUT request\)
+* define the redirect url \(where you will be redirected after a successful POST request\)
 
-All other logic is defined in the parent class, _PutEntityServerResource_.
+All other logic is defined in the parent class, _PostEntityServerResource_.
 
 ### Request Handling
 
-##### @Put \(www-form-urlencoded\)
+##### @POST \(www-form-urlencoded\)
 
 The signature of the method handling the request looks like this:
 
 ```
-@org.restlet.resource.Put("x-www-form-urlencoded")
-public SkysailResponse<T> put(Form form, Variant variant) {...}
+@org.restlet.resource.Post("x-www-form-urlencoded")
+public SkysailResponse<T> post(Form form, Variant variant) {...}
 ```
 
 The logic:
 
 1. Wrap the request in a timer [metric](/metrics.md).
 2. Deserialise the provided \(Restlet\) Form
-3. Follow the @Put\(JSON\) logic
+3. Follow the @Post\(JSON\) logic
 
-##### @Put \(JSON\)
+##### @POST \(JSON\)
 
 The signature of the method handling the request looks like this:
 
 ```
-@Put("json")
-public SkysailResponse<T> putEntity(T entity, Variant variant) {...}
+@Post("json")
+public SkysailResponse<T> post(T entity, Variant variant) {...}
 ```
 
 The logic:
 
 1. Wrap the request in a timer metric.
 2. Add entity and variant to the request attributes for further consumption
-3. Get the request handler for PUT requests and apply the following filters:
+3. Get the request handler for POST requests and apply the following filters:
    [ExceptionCatchingFilter](/concepts/concepts/request-processing/filtering/exceptioncatchingfilter.md) - handle exceptions during request processing  
    ExtractStandardQueryParametersResourceFilter - check and update common query parameters  
    [CheckInvalidInputFilter](/concepts/concepts/request-processing/filtering/checkinvalidinputfilter.md) - security check for invalid input   
    FormDataExtractingFilter - extract the entity  
    [CheckBusinessViolationsFilter](/concepts/concepts/request-processing/filtering/checkbusinessviolationsfilter.md) - validate the entity according to business rules  
-   UpdateEntityFilter - trigger persistence logic to update the entity in the repository  
+   PersistEntityFilter - trigger persistence logic to update the entity in the repository  
    EntityWasAddedFilter - handle update events  
    AddLinkheadersFilter - add link information to response headers  
-   PutRedirectGetFilter - make sure request cannot be resubmitted accidentally  
+   PostRedirectGetFilter - make sure request cannot be resubmitted accidentally  
 
 
 
