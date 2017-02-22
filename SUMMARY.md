@@ -11,6 +11,7 @@
     * [PUT](concepts/concepts/request-processing/put.md)
     * [Filtering](concepts/concepts/request-processing/filtering.md)
       * [ExceptionCatchingFilter](concepts/concepts/request-processing/filtering/exceptioncatchingfilter.md)
+      * [CheckInvalidInputFilter](concepts/concepts/request-processing/filtering/checkinvalidinputfilter.md)
 * [Services](services.md)
   * [Content and Translations](services/content-and-translations.md)
     * [Stores](services/content-and-translations/stores.md)

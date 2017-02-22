@@ -84,7 +84,7 @@ The logic:
 1. Wrap the request in a timer metric.
 2. Add entity and variant to the request attributes for further consumption
 3. Get the request handler for PUT requests and apply the following filters:
-   ExceptionCatchingFilter - handle exceptions during request processing  
+   [ExceptionCatchingFilter](/concepts/concepts/request-processing/filtering/exceptioncatchingfilter.md) - handle exceptions during request processing  
    ExtractStandardQueryParametersResourceFilter - check and update common query parameters  
    CheckInvalidInputFilter - security check for invalid input   
    FormDataExtractingFilter - extract the entity  
