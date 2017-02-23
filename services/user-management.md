@@ -1,6 +1,6 @@
-# User Management
+# Users and Authentication
 
-User Managment is a big topic and there are three sub-chapters dealing with _Authentication_, _Authorization _and the actual _management of users and their roles_.
+User Managment is a big topic and there are three sub-chapters dealing with _Authentication_, _Authorization \_and the actual \_management of users and their roles_.
 
 ## Relevant Bundles
 
