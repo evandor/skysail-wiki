@@ -15,6 +15,8 @@
       * [CheckInvalidInputFilter](concepts/concepts/request-processing/filtering/checkinvalidinputfilter.md)
       * [CheckBusinessViolationsFilter](concepts/concepts/request-processing/filtering/checkbusinessviolationsfilter.md)
 * [Services](services.md)
+  * [User Management](services/user-management.md)
+    * [Authentication](services/user-management/authentication.md)
   * [Content and Translations](services/content-and-translations.md)
     * [Stores](services/content-and-translations/stores.md)
       * [bundleresource](services/content-and-translations/stores/bundleresource.md)
