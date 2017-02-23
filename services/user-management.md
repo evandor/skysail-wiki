@@ -8,6 +8,12 @@ User Managment is a big topic and there are three sub-chapters dealing with Auth
 * **skysail.server.um.httpbasic** - .
 * .
 
+# Overview
+
+The central user management interface \(including authentication and authorization\) is the "UserManagementProvider", which provides access to an AuthenticationService, an AuthorizationService and a UserManagementRepository. 
+
+![](/assets/um.png)
+
 # Usage
 
 Todo
