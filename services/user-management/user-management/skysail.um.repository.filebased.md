@@ -1,6 +1,6 @@
 # User Management with skysail.um.repository.filebased
 
-This bundle implements the interface _UserManagementRepository _roughly like this:
+This bundle implements the interface \_UserManagementRepository \_roughly like this:
 
 ```java
 @Activate
@@ -29,26 +29,9 @@ public Map<User, Set<Role>> getUsersRoles() {
 }
 ```
 
-A matching config file has to be called "users.cfg" and could look like this:
+A matching config file has to be called "users.cfg", for an example, check [this ](/configuration/users.md)page.
 
-```
-users = admin,mira,user
 
-admin.id=#11d2741c-baeb-45bf-8bdd-8a58e983a777
-admin.roles = admin,developer,translator
-admin.password = $2a$12$52R8v2QH3vQRz8NcdtOm5.HhE5tFPZ0T/.MpfUa9rBzOugK.btAHS
-admin.email = evandor@gmail.com
-admin.name = "Carsten"
-admin.surname = "Gräf"
-
-mira.id=#2
-mira.roles = admin,developer
-mira.password=$2a$12$52R8v2QH3vQRz8NcdtOm5.HhE5tFPZ0T/.MpfUa9rBzOugK.btAHS
-
-user.id = #3
-user.password = $2a$12$52R8v2QH3vQRz8NcdtOm5.HhE5tFPZ0T/.MpfUa9rBzOugK.btAHS
- 
-```
 
 
 

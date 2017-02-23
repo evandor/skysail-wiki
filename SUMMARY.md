@@ -27,4 +27,5 @@
   * [Metrics](metrics.md)
 * [Configuration](configuration.md)
   * [Landing Pages](configuration/landing-pages.md)
+  * [Users](configuration/users.md)
 
