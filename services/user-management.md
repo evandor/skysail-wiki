@@ -10,7 +10,7 @@ User Managment is a big topic and there are three sub-chapters dealing with Auth
 
 # Overview
 
-The central user management interface \(including authentication and authorization\) is the "UserManagementProvider", which provides access to an AuthenticationService, an AuthorizationService and a UserManagementRepository. 
+The central user management interface \(including authentication and authorization\) is the "UserManagementProvider", which provides access to an _AuthenticationService_, an _AuthorizationService _and a _UserManagementRepository_.
 
 ![](/assets/um.png)
 
