@@ -8,13 +8,13 @@ public interface AuthenticationService {
     /**
      * @return a restlet authenticator the application is authenticated against.
      */
-    Authenticator getApplicationAuthenticator(Context context);
+    Authenticator getApplicationAuthenticator(Context context, AuthenticationMode authMode);
 
     /**
      * @return a restlet authenticator the applications' resources are
      *         authenticated against.
      */
-    Authenticator getResourceAuthenticator(Context context);
+    Authenticator getResourceAuthenticator(Context context, AuthenticationMode authMode);
 
     /**
      * @return whether or not the current request is authenticated.
@@ -40,7 +40,6 @@ public interface AuthenticationService {
      */
     String getLogoutPath();
 }
-
 ```
 
 The simplest of these bundles is **skysail.server.um.httpbasic, **which provides an authentication scheme based on "[HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)". Another bundle is **skysail.server.um.shiro**, utilizating the apache project [shiro](https://shiro.apache.org/). Authentication is not trivial and skysail doesn't try to reinvent the wheel - if needed, it simply delegates to other libraries to do the job \(they were made for\). Futher bundles are planed for, and, of course, you could create your own bundle implementing the interface above to create your own authentication service.
