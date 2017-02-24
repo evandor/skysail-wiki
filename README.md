@@ -8,14 +8,18 @@ The overall goal of skysail is to provide you an environment where you can creat
 
 Typical backend logic covered by skysail:
 
-* **User Management**
 * **Authentication** / **Authorisation**
-* **Security** aspects like injection
+* **Security** **aspects** \(like injection\)
 * **Configuration**
 * **Validation**
-* **Template Engine**
 * **Documentation**
 * **Persistence**
+
+We have some more things skysail could help you with:
+
+* **User Management**
+* **HTML Rendering** \(Template Engine\)
+* and - **calling other APIs**
 
 ### Modularity
 
