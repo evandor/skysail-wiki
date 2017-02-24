@@ -18,11 +18,11 @@ The older convention \(which is still used\) is "SKYSAIL :: server :: &lt;type&g
 
 ### bundle versions
 
-skysail uses a semantic versioning scheme.
+skysail uses a [semantic versioning scheme](http://bnd.bndtools.org/chapters/170-versioning.html).
 
 ### skysail packages
 
-skysail packages always start with "io.skysail.&lt;type&gt;.&lt;futher parts&gt;".
+skysail packages always start with "io.skysail.&lt;type&gt;.&lt;futher parts&gt;" \(or, for older packages: "io.skysail.server.&lt;type&gt;.&lt;further parts&gt;".
 
 ### endpoints
 
