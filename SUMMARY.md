@@ -4,6 +4,7 @@
 * [Conventions](conventions.md)
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
+  * [Applications](concepts/concepts/applications.md)
   * [Domain and Business Logic](concepts/concepts/domain-and-business-logic.md)
     * [Annotations](concepts/concepts/domain-and-business-logic/annotations.md)
       * [Field](concepts/concepts/domain-and-business-logic/annotations/field.md)
