@@ -27,7 +27,8 @@
       * [InMemoryStore](services/content-and-translations/stores/inmemorystore.md)
   * [Metrics](metrics.md)
 * [Configuration](configuration.md)
-  * [Applidations and CORS](configuration/applidation-and-cors.md)
+  * [Port and Name](configuration/port-and-name.md)
   * [Users](configuration/users.md)
+  * [Applidations and CORS](configuration/applidation-and-cors.md)
   * [Landing Pages](configuration/landing-pages.md)
 
