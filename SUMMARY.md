@@ -32,4 +32,5 @@
   * [Landing Pages](configuration/landing-pages.md)
 * [Experimental](experimental.md)
   * [oauth2](experimental/oauth2.md)
+  * [swagger](experimental/swagger.md)
 
