@@ -32,4 +32,5 @@
   * [Landing Pages](configuration/landing-pages.md)
 * [Experimental](experimental.md)
   * [oauth2](experimental/oauth2.md)
+  * [Polymer UI Extensions](experimental/polymer-ui-extensions.md)
 
