@@ -10,7 +10,6 @@ In Bnd file add something like:
 Polymer-Extensions: \
     spotify/v1/sky-spotify/sky-spotify-left-nav.html,\
     spotify/v1/sky-spotify/sky-spotify-right-nav.html
-
 ```
 
 Example polymer file:
@@ -20,23 +19,23 @@ Example polymer file:
 
 <dom-module id="sky-spotify-left-nav">
   <template>
-    
+
     <a href='/spotify/v1/me'>me</a><br>
     <a href='/spotify/v1/me/playlists'>playlists</a><br>
-    
+
     <iron-ajax
         auto
         url="http://localhost:2021/spotify/v1/me/playlists"
         handle-as="json"
         on-response="handleResponse"
         debounce-duration="300"></iron-ajax>
-    
+
     <ul>    
     <template as="playlist" is="dom-repeat" items="{{payload.items}}">
       <li><a href='{{openSpotify(playlist)}}' target="_spotify">{{playlist.name}}</a></li>
     </template>
     </ul>
-        	
+
     <content></content>    
   </template>
 
@@ -46,19 +45,28 @@ Example polymer file:
       is: 'sky-spotify-left-nav',
 
       properties: {
-      	payload: { type: Object, value: [] }
+          payload: { type: Object, value: [] }
       },
       handleResponse: function(request) {
-      	console.log(request.detail.response.payload);
-      	this.payload = JSON.parse(request.detail.response.payload);
-      	console.log(this.payload);
+          console.log(request.detail.response.payload);
+          this.payload = JSON.parse(request.detail.response.payload);
+          console.log(this.payload);
       },
       openSpotify: function(playlist) {
-      	return playlist.external_urls['spotify'];
+          return playlist.external_urls['spotify'];
       }
     });
   </script>
 </dom-module>
+```
+
+Testing in bundle skysail.app.spotify
+
+In StringTemplateRenderer, the manifest entry is saved to uiPolymerExtensions, a list of Strings, which is read in bst\_head like this:
+
+```
+<!-- UI Extensions from bundles (if any) -->
+$converter.uiPolymerExtensions: {extension | <link rel="import" href="$extension$">};separator="\n"$
 
 ```
 
