@@ -4,15 +4,19 @@ Idea:
 
 Define polymer code snippets which can be used in the generic UI.
 
-In Bnd file add something like:
+In a SkysailServerResource implementation add something like:
 
 ```
-Polymer-Extensions: \
-    spotify/v1/sky-spotify/sky-spotify-left-nav.html,\
-    spotify/v1/sky-spotify/sky-spotify-right-nav.html
+public List<String> getPolymerUiExtensions() {
+    return Arrays.asList("sky-left-nav");
+}
 ```
 
 Example polymer file:
+
+Please note the naming convention: sky-left-nav becomes 
+
+/&lt;appname&gt;/v1/sky-&lt;appname&gt;/sky-left-nav.html
 
 ```
 <link rel="import" href="/_polymer/bower_components/polymer/polymer.html">
@@ -60,14 +64,13 @@ Example polymer file:
 </dom-module>
 ```
 
-Testing in bundle skysail.app.spotify
+Testing in bundle skysail.app.spotify, skysail.app.website
 
-In StringTemplateRenderer, the manifest entry is saved to uiPolymerExtensions, a list of Strings, which is read in bst\_head like this:
+In StringTemplateRenderer constructor, this is saved to uiPolymerExtensions, a list of Strings, which is read in bst\_head like this:
 
 ```
 <!-- UI Extensions from bundles (if any) -->
 $converter.uiPolymerExtensions: {extension | <link rel="import" href="$extension$">};separator="\n"$
-
 ```
 
 
