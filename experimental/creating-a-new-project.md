@@ -4,7 +4,7 @@ Example: github
 
 create new repository with .gitignore and readme
 
-git clone https://github.com/evandor/skysail-notes.git
+git clone [https://github.com/evandor/skysail-notes.git](https://github.com/evandor/skysail-notes.git)
 
 create new eclipse workspace
 
@@ -14,9 +14,9 @@ open bndtools perspective
 
 new bnd osgi workspace
 
-  create in: path of cloned repo 
+create in: path of cloned repo
 
-  **osgi/workspace**
+**osgi/workspace**
 
 chmod 775 gradlew
 
@@ -28,7 +28,7 @@ create test project
 
 scala:
 
-set root .gitignore to 
+set root .gitignore to
 
 ```
 *.class
@@ -52,12 +52,11 @@ project/plugins/project/
 .gradle/
 /generated/
 .metadata
-
 ```
-
-
 
 links:
 
-http://enroute.osgi.org/qs/200-workspace.html
+[http://enroute.osgi.org/qs/200-workspace.html](http://enroute.osgi.org/qs/200-workspace.html)
+
+https://github.com/bndtools/bnd/blob/master/biz.aQute.bnd.gradle/README.md\#gradle-plugin-for-workspace-builds
 
