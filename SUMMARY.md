@@ -22,6 +22,7 @@
       * [skysail.um.httpbasic](services/user-management/authentication/skysail.um.httpbasic.md)
     * [User Management](services/user-management/user-management.md)
       * [skysail.um.repository.filebased](services/user-management/user-management/skysail.um.repository.filebased.md)
+      * [skysail.um.repo.test](services/user-management/user-management/skysailumrepotest.md)
   * [Content and Translations](services/content-and-translations.md)
     * [Stores](services/content-and-translations/stores.md)
       * [bundleresource](services/content-and-translations/stores/bundleresource.md)
