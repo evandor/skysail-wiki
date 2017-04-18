@@ -16,7 +16,7 @@
       * [CheckInvalidInputFilter](concepts/concepts/request-processing/filtering/checkinvalidinputfilter.md)
       * [CheckBusinessViolationsFilter](concepts/concepts/request-processing/filtering/checkbusinessviolationsfilter.md)
 * [Services](services.md)
-  * [Users and Authentication](services/user-management.md)
+  * [Users, Authentication & Authentication](services/user-management.md)
     * [Authentication](services/user-management/authentication.md)
       * [skysail.um.httpbasic](services/user-management/authentication/skysail.um.httpbasic.md)
     * [User Management](services/user-management/user-management.md)

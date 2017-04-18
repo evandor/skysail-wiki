@@ -1,6 +1,6 @@
 # Authentication
 
-Typically, you want your users to **authenticate **when using a web _application _\(as opposed to most _web sites_ which are meant for reading\). Authentication can be done is various ways, and skysail provides a couple of bundles you can choose from. If it comes to authentication, those bundles need to provide a class implementing the following interface from **skysail.api**:
+Typically, you want your users to **authenticate **when using a web _application _\(as opposed to most _web sites_ which are meant for reading\). Authentication can be done is various ways, and skysail provides a couple of bundles \(see Chapter "User Management"\) you can choose from. If it comes to authentication, those bundles need to provide a class implementing the following interface from **skysail.api**:
 
 ```java
 public interface AuthenticationService {

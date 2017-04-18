@@ -1,11 +1,11 @@
-# Users and Authentication
+# Users, Authentication & Authorization
 
 User Managment is a big topic and there are three sub-chapters dealing with Authentication, Authorization and the actual management of users and their roles.
 
 ## Relevant Bundles
 
 * **skysail.api** - interface definitions.
-* **skysail.server.um.httpbasic** - .
+* **skysail.um.httpbasic** - .
 * .
 
 # Overview
