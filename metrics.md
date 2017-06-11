@@ -5,7 +5,7 @@ Metrics is a service helping developers to **measure various metrics inside thei
 ## Relevant Bundles
 
 * **skysail.api** - interface definitions and Noop Implementations.
-* **skysail.core** \(former skysail.server\) - utilises _metrics_ if \(at least\) one implementation is available in the runtime.
+* **skysail.core** - utilises _metrics_ if \(at least\) one implementation is available in the runtime.
 * **skysail.ext.metrics \(repo: skysail-ex\)** - bundle providing an [MetricsImplementation](https://github.com/evandor/skysail/blob/master/skysail.api/src/io/skysail/api/metrics/MetricsImplementation.java) based on [Dropwizard](http://metrics.dropwizard.io/). 
 * **skysail.server.app.metrics** - access to collected metrics and visualisation.
 
