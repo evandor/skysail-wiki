@@ -12,7 +12,7 @@ All the concepts like "Applications", "Business Logic" and "Request Processing" 
 
 The **two big **decisions right at the beginning were:
 
-* the programming language \(**Java**\)
+* the programming language \(**Scala**\)
 * and the "framework" \(**OSGi** \[with bndtools\]\)
 
 For those still reading on ;\):
@@ -21,5 +21,5 @@ Picking this combination has a few implications: Actually, the programming langu
 
 Round about a hundred bundles for a typical skysail installation seem a lot. But it's not: you'll get the server \(jetty\), a database \(orientdb\), serialization features \(jackson\) and validation stuff \(hibernate\). And more. Using OSGi let's you pick between various implements of specific features easily \(for example, where do you store your users, if at all\) - and, if you don't find what you are looking for - implement it yourself. Replace the implementation you are not happy with, and it will work.
 
-And: your _deployable_, it's just a single jar file. You start it like "java -jar myskysail.installation.jar". That's it. Database and server included. 
+And: your _deployable_, it's just a single jar file. You start it like "java -jar myskysail.installation.jar". That's it. Database and server included.
 
