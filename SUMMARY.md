@@ -15,6 +15,7 @@
       * [ExceptionCatchingFilter](concepts/concepts/request-processing/filtering/exceptioncatchingfilter.md)
       * [CheckInvalidInputFilter](concepts/concepts/request-processing/filtering/checkinvalidinputfilter.md)
       * [CheckBusinessViolationsFilter](concepts/concepts/request-processing/filtering/checkbusinessviolationsfilter.md)
+      * [AddLinkheadersFilter](concepts/concepts/request-processing/filtering/addlinkheaderfilter.md)
   * [Transformations](concepts/concepts/transformations.md)
   * [Links](concepts/concepts/links.md)
 * [Services](services.md)
