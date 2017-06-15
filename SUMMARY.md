@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
   * [Next steps](next-steps.md)
+    * [HelloWorldApplication](next-steps/helloworldapplication.md)
 * [Conventions](conventions.md)
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
