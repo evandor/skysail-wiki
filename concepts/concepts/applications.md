@@ -2,7 +2,7 @@
 
 When it comes to skysail, as a developer, you can extend \(and/or\) fix its core functionality, or you can create **Applications**.
 
-An _application_ is a **cohesive unit** \(in DDD: a bounded context\) of functionality, expressed as a **domain model**, the** associated business logic **and made available to the outside world as a set of **RESTful endpoints**. And, it is an **OSGi bundle**.
+An _application_ is a **cohesive unit** \(in DDD: a bounded context\) of functionality, expressed as a [**domain model**](/concepts/concepts/domain-and-business-logic/application-model.md), the** associated business logic **and made available to the outside world as a set of **RESTful endpoints**. And, it is an **OSGi bundle**.
 
 This bundle can be deployed into the skysail server, and, given its dependencies are matched, its endpoints will be available for provisioning and consumption.
 
@@ -18,7 +18,7 @@ There are \(at least\) two ways to configure an application: There's the general
 
 This kind of config is described [here](/configuration/applidation-and-cors.md).
 
-### Application-Specific Configuration 
+### Application-Specific Configuration
 
 Let's use an example here: let's assume we have an application which utilizes the spotify API. So we need to configure a clientId, a clientSecret and the redirectUrl. This information should not be hardcoded, we don't even want to put it in version control. What we do is to define a configuration description and a configuration provider:
 
@@ -33,7 +33,6 @@ public @interface SpotifyConfigDescriptor {
     String clientSecret() default "";
     String redirectUri() default "";
 }
-
 ```
 
 This file defines what to expect inside a configuration file \(and could provide defaults as well\). Then we create an OSGi component which will make the configuration data available to our application:
@@ -77,7 +76,6 @@ Given a configuration file with the name "spotify.cfg" \(see configurationPid\) 
 clientId=abc...
 clientSecret=123...
 redirectUri=http://localhost:2021/spotify/v1/callback
-
 ```
 
 the SpotifyConfiguration will be instantiated by the framework and will receive the data defined in the config file. You now can access this somewhere else in your application like this:
@@ -89,7 +87,7 @@ import io.skysail.app.spotify.config.SpotifyConfiguration;
 
 @Component(immediate = true, configurationPolicy = ConfigurationPolicy.OPTIONAL)
 public class SpotifyApplication extends SkysailApplication implements ApplicationProvider, MenuItemProvider {
-    
+
     @Reference
     @Getter
     private SpotifyConfiguration config;

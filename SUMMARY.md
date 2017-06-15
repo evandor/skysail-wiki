@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+  * [Next steps](next-steps.md)
 * [Conventions](conventions.md)
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)

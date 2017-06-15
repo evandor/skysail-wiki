@@ -6,15 +6,13 @@ skysail consists of a number of bundles and depends on various others. In order 
 
 A skysail **bundle's symbolic name** starts with "_skysail._", followed by
 
-* "api"
-* "domain"
 * "core"
+* "server"
 * "app"
-* to be done
+* "ext"
+* ...
 
 The **bundle's name** has the naming convention "SKYSAIL :: &lt;type&gt; :: &lt;futher parts&gt;".
-
-The older convention \(which is still used\) is "SKYSAIL :: server :: &lt;type&gt; :: &lt;further parts&gt;".
 
 ### bundle versions
 
@@ -22,7 +20,7 @@ skysail uses a [semantic versioning scheme](http://bnd.bndtools.org/chapters/170
 
 ### skysail packages
 
-skysail packages always start with "io.skysail.&lt;type&gt;.&lt;futher parts&gt;" \(or, for older packages: "io.skysail.server.&lt;type&gt;.&lt;further parts&gt;".
+skysail packages always start with "io.skysail.&lt;type&gt;.&lt;futher parts&gt;".
 
 ### endpoints
 
