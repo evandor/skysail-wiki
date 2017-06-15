@@ -11,3 +11,5 @@ logback.configurationFile.path = config/local
 
 Here, the logback configuration is looked up in the folder config/local, and other configuration files are looked for in both the folders config/local and config/common.
 
+Hint: If you download a skysail application, you will get one single jar file; running this the first time will create the config folder with some default configuration which you could change afterwards.
+
