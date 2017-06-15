@@ -1,6 +1,6 @@
 # Next steps
 
-Maybe you just read the introduction and don't really know how to proceed. Please check the next sections.
+Maybe you just read the introduction and don't really know how to proceed. Please check the next sections and decide which path you want to follow.
 
 ## Hello World
 

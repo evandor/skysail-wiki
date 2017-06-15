@@ -39,6 +39,7 @@
   * [Applidations and CORS](configuration/applidation-and-cors.md)
   * [Users](configuration/users.md)
   * [Landing Pages](configuration/landing-pages.md)
+* [Resources](resources.md)
 * [Experimental](experimental.md)
   * [oauth2](experimental/oauth2.md)
   * [swagger](experimental/swagger.md)
