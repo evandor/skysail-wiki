@@ -12,11 +12,11 @@ Once downloaded, start it from the command line like
 java -jar skysail.app.helloworld.jar
 ```
 
-Running this for the very first time will create a config folder \(as it was missing\), stop the framework and ask you to run it again.
+Running this for the **very first time** will create a config folder \(as it was missing\), **stop** the framework and ask you to **run it again**.
 
 Then open up [http://localhost:2023/hello/v1](http://localhost:2023/hello/v1) and post a new greeting.
 
-If you wonder why you had to download more then 40MB for a simple HelloWorld Application \(or if you are curious\), please read this page giving you some more information about what this Application actually does.
+If you wonder why you had to download more then 40MB for a simple HelloWorld Application \(or if you are curious\), please read this [page](/next-steps/helloworldapplication.md) giving you some more information about what this Application actually does.
 
 ## Creating a new SkysailApplication
 
