@@ -24,7 +24,11 @@ If you wonder why you had to download more then 40MB for a simple HelloWorld App
 
 ## Understanding Skysail
 
-## ...
+...
+
+## Extend Skysail
+
+## Develop Skysail
 
 
 
