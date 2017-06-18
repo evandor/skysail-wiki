@@ -21,6 +21,8 @@ We have some more things skysail could help you with:
 * **HTML Rendering** \(Template Engine\)
 * and - **calling other APIs**
 
+A skysail backend does not only serve JSON to be used with some client, it creates a web GUI so that you can actually use and validate your implementation with a browser only.
+
 ### Modularity
 
 skysail is a **collection of OSGi bundles**, depending on other bundles, and defining an API for domains like authentication, security, persistence and so on. If some API implementation does not fulfil your needs, it is easy to replace it with your own implementation.
