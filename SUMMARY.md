@@ -7,6 +7,7 @@
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
   * [Applications](concepts/concepts/applications.md)
+  * [Resources](concepts/concepts/resources.md)
   * [Request Processing](concepts/concepts/request-processing.md)
     * [PUT](concepts/concepts/request-processing/put.md)
     * [POST](concepts/concepts/request-processing/post.md)
