@@ -17,7 +17,7 @@ case class Note (
     var id: Option[String] = None,
     @(Field @field)(description = "The note's content") 
     @BeanProperty var content: String = ""
-) extends ScalaEntity[String]  
+) extends ScalaEntity[String]
 ```
 
 The ListServerResource would look like
@@ -42,4 +42,19 @@ class NotesResource extends ListServerResource[List[Note]](classOf[NoteResource]
 ```
 
 setDescription and the @ApiXXX Annotations are optional and being used by the swagger extension.
+
+### Implementation
+
+ListServerResource handles @Get Requests basically like this:
+
+```
+@Get("html|json|yaml|xml|csv|timeline|carbon|standalone|data")
+def getEntities(variant: Variant): ListResponse[List[T]] = {
+  val requestHandler = new ScalaListRequestHandler[T](variant, getModel())
+  val entitiesList = requestHandler.createForList(Method.GET).handle(this, getResponse()).getEntity()
+  new ListResponse[List[T]](getResponse(), entitiesList)
+}
+```
+
+
 

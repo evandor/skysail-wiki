@@ -45,6 +45,7 @@
   * [Users](configuration/users.md)
   * [Landing Pages](configuration/landing-pages.md)
 * [Resources on the web](resources.md)
+  * [git repositories](resources/git-repositories.md)
 * [Experimental](experimental.md)
   * [oauth2](experimental/oauth2.md)
   * [swagger](experimental/swagger.md)

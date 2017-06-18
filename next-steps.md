@@ -33,7 +33,11 @@ If you want to understand why skysail looks like it does, please read the follow
 
 ## Extend Skysail
 
+...
+
 ## Develop Skysail
+
+...
 
 
 
