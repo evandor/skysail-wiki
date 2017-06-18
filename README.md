@@ -1,14 +1,14 @@
-# skysail
+# skysail...
 
-##### A modular, domain-centric and RESTful BaaS \(Backend as a Service\)
+##### ...is: a modular, domain-centric and RESTful BaaS \(Backend as a Service\)
 
 ###### \(That you can host yourself\)
 
-The overall goal of skysail is to provide you an environment where you can create **typical backend logic in a generic, quick way** with as **little dependencies** as possible. This makes skysail suited for _prototypes_, first of all, but I hope that this approach - even if generic - is good enough for production ready _applications_ as well.
+The overall goal of skysail is to provide you with an environment where you can create **typical backend logic in a generic, quick way** with as **little dependencies** as possible. This makes skysail suited for _prototypes_, first of all, but I hope that this approach - even if generic - is good enough for production ready _applications_ as well.
 
 Typical backend logic covered by skysail:
 
-* **Authentication** / **Authorisation**
+* **Authentication** / **Authorization**
 * **Security** **aspects** \(like injection\)
 * **Configuration**
 * **Validation**
