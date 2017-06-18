@@ -26,7 +26,7 @@ The landingpages configuration is evaluated in the _SkysailRootApplication_ clas
 class SkysailRootApplication extends SkysailApplication(...) ... { ... }
 ```
 
-Now, when the application root path is requested, this is handled by the _DefaultResource_, which is defined in the _SkysailRootApplication _class. DefaultResource overrides the redirectTo - Method 
+Now, when the application root path is requested, this is handled by the _DefaultResource_, which is defined in the \_SkysailRootApplication \_class. DefaultResource overrides the redirectTo - Method
 
 ```
 override def redirectTo() = {
@@ -34,5 +34,5 @@ override def redirectTo() = {
 }
 ```
 
-to delegate to SkysailRootApplication.
+to delegate to SkysailRootApplication which will use the landingpage config to determine the redirect url.
 
