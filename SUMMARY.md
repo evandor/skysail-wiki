@@ -9,6 +9,9 @@
   * [Applications](concepts/concepts/applications.md)
   * [Resources](concepts/concepts/resources.md)
     * [ListServerResource\[T\]](concepts/concepts/resources/listserverresourcet.md)
+    * [PostServerResource\[T\]](concepts/concepts/resources/postserverresourcet.md)
+    * [PutServerResource](concepts/concepts/resources/putserverresource.md)
+    * EntityServerResource
   * [Request Processing](concepts/concepts/request-processing.md)
     * [PUT](concepts/concepts/request-processing/put.md)
     * [POST](concepts/concepts/request-processing/post.md)
