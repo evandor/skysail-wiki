@@ -23,13 +23,15 @@ We have some more things skysail could help you with:
 
 A skysail backend does not only serve JSON to be used with some client, it creates a web GUI so that you can actually use and validate your implementation with a browser only.
 
+Now, let's explain the main buzz-words from the definition above:
+
 ### Modularity
 
 skysail is a **collection of OSGi bundles**, depending on other bundles, and defining an API for domains like authentication, security, persistence and so on. If some API implementation does not fulfil your needs, it is easy to replace it with your own implementation.
 
 ### Domain-Centric
 
-skysail lets you **concentrate on your business \(or domain\) logic**. Http Server, database, configuration setup and the like are already there. Just use them.
+skysail lets you **concentrate on your business \(or domain\) logic**. Http Server, database, configuration setup and the like are already there. Just use them. Or replace them with an implementation more suited for your needs.
 
 ### RESTful
 

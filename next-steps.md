@@ -4,7 +4,7 @@ Maybe you just read the introduction and don't really know how to proceed. Pleas
 
 ## Hello World
 
-If you want to get a first idea of what this is all about, just download and run the simplest of all applications: A HelloWorldApplication, you can get it from [here](http://downloads.skysail.io/apps/helloworld/).
+If you want to get _a first idea of what this is all about_, just download and run the simplest of all applications: A HelloWorldApplication, you can get it from [here](http://downloads.skysail.io/apps/helloworld/).
 
 Once downloaded, start it from the command line like
 
@@ -22,9 +22,14 @@ If you wonder why you had to download more then 40MB for a simple HelloWorld App
 
 ...
 
-## Understanding Skysail
+## Understanding skysail
 
-...
+If you want to understand why skysail looks like it does, please read the following sections:
+
+* [Conventions](/conventions.md)
+* Concepts - [Applications](/concepts/concepts/applications.md)
+* Concepts - [Resources](/concepts/concepts/resources.md)
+* Concepts - [Request Processing](/concepts/concepts/request-processing.md)
 
 ## Extend Skysail
 
