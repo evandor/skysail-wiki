@@ -12,7 +12,7 @@ The idea is to provide you with a set of [conventions](/conventions.md) and asso
 
 Let's say you want to create a Checklist Application. The domain of this application will need a Checklist Entity, something which will look like
 
-```
+```java
 class Checklist {
   val title: String,
   val elements: List[String]  
@@ -21,7 +21,7 @@ class Checklist {
 
 Now, you want to create a new Checklist. You'd provide a class extending _PostEntityServerResource\[Checklist\]_:
 
-```
+```java
 class PostChecklistResource extends PostEntityServerResource[Checklist] {
   def createEntityTemplate() = Checklist("mylist", List())
   def addEntity(entity: Checklist): Checklist = Services.service.create(entity).get
