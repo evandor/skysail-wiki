@@ -26,7 +26,6 @@ class PostChecklistResource extends PostEntityServerResource[Checklist] {
   def createEntityTemplate() = Checklist("mylist", List())
   def addEntity(entity: Checklist): Checklist = Services.service.create(entity).get
 }
-
 ```
 
 This class - provided the service which will actually create the entity - is sufficient to handle requests to create a Checklist.
@@ -56,7 +55,7 @@ class PutChecklistResource extends PutEntityServerResource[Checklist] {
 
 Let's show the service implementation as well:
 
-```
+```java
 object Services {
   def service = org.restlet.Application.getCurrent().asInstanceOf[ChecklistsApplication].service
 }
