@@ -32,7 +32,7 @@ This class - provided the service which will actually create the entity - is suf
 
 The Checklist has been created - but now you want to **list** all Checklists available: Implement a _ListServerResource_:
 
-```
+```java
 class ChecklistsResource extends ListServerResource[List[Checklist]] {
   override def getEntity() = Services.service.find(new Filter(getRequest()), new Pagination(getRequest(), getResponse()))
 }
@@ -40,7 +40,7 @@ class ChecklistsResource extends ListServerResource[List[Checklist]] {
 
 Again, that's it. This class will list all available Checklists. Change a checklist? Here we go:
 
-```
+```java
 class PutChecklistResource extends PutEntityServerResource[Checklist] {
   addToContext(ResourceContextId.LINK_TITLE, "update Checklist")
   override def getEntity(): Checklist = Services.service.getById(getAttribute("id")).get
@@ -82,7 +82,7 @@ class ChecklistsService(dbService: ScalaDbService, appModel: ApplicationModel) {
 
 Finally, to make this actually run, we need an [Application:](/concepts/concepts/applications.md)
 
-```
+```java
 @Component(
   immediate = true,
   configurationPolicy = ConfigurationPolicy.OPTIONAL,
