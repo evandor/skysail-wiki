@@ -48,7 +48,8 @@
   * [git repositories](resources/git-repositories.md)
 * [Development](development.md)
   * [IDE setup](development/ide-setup.md)
-    * Eclipse
+    * [Eclipse](development/ide-setup/eclipse.md)
+    * [Intellij](development/ide-setup/intellij.md)
 * [Experimental](experimental.md)
   * [oauth2](experimental/oauth2.md)
   * [swagger](experimental/swagger.md)
