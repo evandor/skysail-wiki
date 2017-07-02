@@ -46,6 +46,9 @@
   * [Landing Pages](configuration/landing-pages.md)
 * [Resources on the web](resources.md)
   * [git repositories](resources/git-repositories.md)
+* [Development](development.md)
+  * [IDE setup](development/ide-setup.md)
+    * Eclipse
 * [Experimental](experimental.md)
   * [oauth2](experimental/oauth2.md)
   * [swagger](experimental/swagger.md)
