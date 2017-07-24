@@ -11,6 +11,9 @@ These instructions are for Eclipse Oxygen, but should apply to older versions as
 * You can close the project "io.skysail.bundled", this is only used to create bundles from ordinary jars.
 * Clean and Build all projects; if there are errors, click on "Bndtools &gt; Refresh Repositories" in the bndools perspective.
 * open skysail.core/core.test.bndrun and start it by clicking "Run OSGi" \(upper right of the Run-Tab-Editor\)
+* For Macs: [http://njbartlett.name/2011/10/09/workspace-mac-badge.html](http://njbartlett.name/2011/10/09/workspace-mac-badge.html)
+
+* For Macs - Market place: OS X Eclipse Launcher
 
 
 

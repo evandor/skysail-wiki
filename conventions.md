@@ -4,7 +4,7 @@ skysail consists of a number of bundles and depends on various others. In order 
 
 ### skysail Bundles
 
-A skysail **bundle's symbolic name** starts with "_skysail._", followed by
+A skysail **bundle's symbolic name** starts with "_skysail._", followed by its "type", e.g.
 
 * "core"
 * "server"
