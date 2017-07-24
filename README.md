@@ -9,7 +9,7 @@ The overall goal of skysail is to provide you with an environment where you can 
 Typical backend logic covered by skysail:
 
 * **Authentication** / **Authorization**
-* **Security** **aspects** \(like injection\)
+* **Security** **aspects** \(like injections\)
 * **Configuration**
 * **Validation**
 * **Documentation**
@@ -21,7 +21,7 @@ We have some more things skysail could help you with:
 * **HTML Rendering** \(Template Engine\)
 * and - **calling other APIs**
 
-A skysail backend does not only serve JSON to be used with some client, it creates a web GUI so that you can actually use and validate your implementation with a browser only.
+A skysail backend does not only serve JSON to be used by some client, it creates a web GUI so that you can actually use and validate your implementation directly with a browser.
 
 Now, let's explain the main buzz-words from the definition above:
 
@@ -43,5 +43,5 @@ skysail is a [Backend-as-a-Service](https://en.wikipedia.org/wiki/Mobile_backend
 
 ### Self-Hosting
 
-The difference to other BaaS, you can download and run skysail on your own machines.
+The difference to many other BaaS, you can download and run skysail on your own machines.
 
