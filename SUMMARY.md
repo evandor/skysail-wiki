@@ -7,6 +7,7 @@
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
   * [Applications](concepts/concepts/applications.md)
+    * [RootApplication](concepts/concepts/applications/rootapplication.md)
   * [Resources](concepts/concepts/resources.md)
     * [ListServerResource\[T\]](concepts/concepts/resources/listserverresourcet.md)
     * [PostServerResource\[T\]](concepts/concepts/resources/postserverresourcet.md)
@@ -56,4 +57,5 @@
   * [Polymer UI Extensions](experimental/polymer-ui-extensions.md)
   * [cucumber tests](experimental/cucumber-tests.md)
   * [creating a new project](experimental/creating-a-new-project.md)
+  * akka
 
