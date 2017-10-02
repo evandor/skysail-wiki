@@ -21,7 +21,7 @@ We have some more things skysail could help you with:
 * **HTML Rendering** \(Template Engine\)
 * and - **calling other APIs**
 
-A skysail backend does not only serve JSON to be used by some client, it creates a web GUI so that you can actually use and validate your implementation directly with a browser.
+A skysail backend does not only serve JSON to be used by some client, it creates a generic web GUI so that you can actually use and validate your implementation directly with a browser.
 
 Now, let's explain the main buzz-words from the definition above:
 
