@@ -6,6 +6,7 @@
   * [Implementation Status](status.md)
     * [Authentication / Authorization](authentication-authorization.md)
     * [Security](test.md)
+    * [Configuration](configuration_status.md)
 * [Conventions](conventions.md)
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
