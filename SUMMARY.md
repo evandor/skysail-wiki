@@ -58,5 +58,6 @@
   * [cucumber tests](experimental/cucumber-tests.md)
   * [creating a new project](experimental/creating-a-new-project.md)
   * [docker](docker.md)
+  * [twirl](twirl.md)
   * akka
 

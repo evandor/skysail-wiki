@@ -1,28 +1,30 @@
 # Docker
 
-## General 
+Sites
 
-http://paulbakker.io/docker/docker-osgi/
+
+
+## General
+
+[http://paulbakker.io/docker/docker-osgi/](http://paulbakker.io/docker/docker-osgi/)
 
 ## Local
 
 In project root dir:
 
-./gradlew clean build skysail.core:export.core.int skysail.core:runnable
+`./gradlew clean build skysail.core:export.core.int skysail.core:runnable  
+cd skysail.core/etc/release  
+docker build -t evandor/skysail-server .`
 
-cd skysail.core/etc/release
+ggfs Login: evandor / ...
 
-docker build -t evandor/skysail-server .
+docker run -ti --rm -p 9102:9102 evandor/skysail-server
 
-## Sofia 
-
-  
-
-
+## CI
 
 
-  
 
+## Sofia
 
 docker rmi $\(docker images -f "dangling=true" -q\)
 
@@ -36,15 +38,9 @@ docker login
 
 docker push evandor/skysail-server
 
-  
-
-
 run on sofia:
 
 sudo docker run --name skysail-server -ti --rm -p 9102:9102 evandor/skysail-server:latest
-
-  
-
 
 access running container on sofia
 
