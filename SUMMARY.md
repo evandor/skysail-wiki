@@ -7,6 +7,7 @@
     * [Authentication / Authorization](authentication-authorization.md)
     * [Security](test.md)
     * [Configuration](configuration_status.md)
+    * [Validation](validation.md)
 * [Conventions](conventions.md)
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
