@@ -8,6 +8,11 @@
     * [Security](test.md)
     * [Configuration](configuration_status.md)
     * [Validation](validation.md)
+    * [Documentation](documentation.md)
+    * [Persistence](persistence.md)
+    * [User Management](user-management.md)
+    * [HTML Rendering](html-rendering.md)
+    * Calling APIs
 * [Conventions](conventions.md)
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
