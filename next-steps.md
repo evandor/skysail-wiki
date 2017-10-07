@@ -4,6 +4,8 @@ Maybe you just read the introduction and don't really know how to proceed. Pleas
 
 ## Hello World
 
+**@Deprecated**
+
 If you want to get _a first idea of what this is all about_, just download and run the simplest of all applications: A HelloWorldApplication, you can get it from [here](http://downloads.skysail.io/apps/helloworld/).
 
 Once downloaded, start it from the command line like
@@ -19,6 +21,8 @@ Then open up [http://localhost:2023/hello/v1](http://localhost:2023/hello/v1) an
 If you wonder why you had to download more then 40MB for a simple HelloWorld Application \(or if you are curious\), please read this [page](/next-steps/helloworldapplication.md) giving you some more information about what this Application actually does.
 
 ## Creating a new SkysailApplication
+
+**@Deprecated**
 
 ...
 
@@ -38,6 +42,4 @@ If you want to understand why skysail looks like it does, please read the follow
 ## Develop Skysail
 
 ...
-
-
 

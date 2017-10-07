@@ -3,6 +3,16 @@
 * [Introduction](README.md)
   * [Next steps](next-steps.md)
     * [HelloWorldApplication](next-steps/helloworldapplication.md)
+  * [Implementation Status](status.md)
+    * [Authentication / Authorization](authentication-authorization.md)
+    * [Security](test.md)
+    * [Configuration](configuration_status.md)
+    * [Validation](validation.md)
+    * [Documentation](documentation.md)
+    * [Persistence](persistence.md)
+    * [User Management](user-management.md)
+    * [HTML Rendering](html-rendering.md)
+    * Calling APIs
 * [Conventions](conventions.md)
   * [Endpoints' schema](conventions/endpoints-schema.md)
 * [Concepts](concepts/concepts.md)
@@ -60,5 +70,5 @@
   * [docker](docker.md)
   * [twirl](twirl.md)
   * [gradle-twirl-plugin](experimental/gradle-twirl-plugin.md)
-  * akka
+  * [akka](experimental/akka.md)
 
