@@ -70,5 +70,5 @@
   * [docker](docker.md)
   * [twirl](twirl.md)
   * [gradle-twirl-plugin](experimental/gradle-twirl-plugin.md)
-  * akka
+  * [akka](experimental/akka.md)
 
