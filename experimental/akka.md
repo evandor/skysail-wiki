@@ -2,9 +2,9 @@
 
 ## RoutesCreator \(Actor\):
 
-Matches the request to a Handler via the requests URI, applying a series of common Directives \(to deal with authentication, content negotiation etc\). 
+Matches the request to a Handler via the requests URI, applying a series of common Directives \(to deal with authentication, content negotiation etc\).
 
-If a match is found, a new _ProcessComand_ message is sent to the associated application actor: 
+If a match is found, a new _ProcessComand_ message is sent to the associated application actor:
 
 ```scala
 val applicationActor: ApplictionActor = ...
@@ -26,25 +26,32 @@ The _ApplicationActor_ handles the ProcessCommand created by the RoutesCreator:
 
 ```
 case cmd: ProcessCommand => {
-  val sendBackTo = sender()
-  val theClass = cmd.cls.newInstance()
+  ...
+  val theClass = cmd.resourceClass.newInstance()
   val controllerActor = ... // create new ControllerActor as Child
-  val r = (controllerActor ? SkysailContext(cmd, appModel, theClass, bundleContext)).mapTo[ListResponseEvent[_]]
-  r onComplete {
-    case Success(value) => sendBackTo ! value
-    case Failure(failure) => ...
-  }
+  (controllerActor ? SkysailContext(cmd, appModel, theClass, bundleContext)).mapTo[ListResponseEvent[_]]
+  ...
 }
-
 ```
 
+It uses the resource class from the _ProcessCommand_ to create a new instance of this class \(which will be used to actually execute the business logic associated with the request\).
 
+There is only one ApplicationActor per Application, but each request creates a new ControllerActor as a child actor to the application actor.
+
+A new SkysailContext object is sent to the newly created ControllerActor using
+
+* the original ProcessCommand
+* the applicationModel of the current Application
+* the new resource instance and
+* the OSGi bundle context.
 
 ## ControllerActor
 
+Now its the newly created ControllerActors responsibility to match the request method and call the appropriate method on the resource class:
+
 ```
 cmd.ctx.request.method match {
-  case HttpMethods.GET =>
+  case HttpMethods.GET => resource.get(RequestEvent(cmd, self))
   case HttpMethods.PUT =>
   case HttpMethods.DELETE => 
   case HttpMethods.POST => resource.asInstanceOf[PostSupport].post(RequestEvent(cmd, self))
