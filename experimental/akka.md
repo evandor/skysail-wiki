@@ -4,6 +4,8 @@
 http://helenaedelson.com/?p=879
 ```
 
+## ![](/assets/actors.png)
+
 ## RoutesCreator \(Actor\):
 
 Matches the request to a Handler via the requests URI, applying a series of common Directives \(to deal with authentication, content negotiation etc\). If no route is created matching a specific URI, skysail will return the usual 404 response.
