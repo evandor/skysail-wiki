@@ -7,7 +7,7 @@ Matches the request to a Handler via the requests URI, applying a series of comm
 If a match is found, a new _ProcessComand_ message is sent to the associated application actor:
 
 ```scala
-val applicationActor: ApplictionActor = ...
+val applicationActor = ... // get the application actor for the current Application
 val processCommand = ProcessCommand(requestContext, resourceClass, urlParameter, unmatchedPath)
 (applicationActor ? processCommand).mapTo[ListResponseEvent[_]]
 ...
@@ -61,18 +61,20 @@ cmd.ctx.request.method match {
 
 ## Resource
 
-```
+A Resource instance is not an actor. It is called by a _ControllerActor_ to execute the business logic for this request and will send back a ResponseEvent to its original ControllerActor:
+
+```scala
 def get(requestEvent: RequestEvent): Unit = {
-    val applicationActor = SkysailApplication.getApplicationActorSelection(actorContext.system, classOf[BookmarksApplication].getName)
-    val r = (applicationActor ? ApplicationActor.GetApplication()).mapTo[BookmarksApplication]
-    //reply(requestEvent, app.repo.find())
+    val r = ... // async business logic
     r onComplete {
-      case Success(app) => requestEvent.controllerActor ! ListResponseEvent(requestEvent, app.repo.find())
-      case Failure(failure) => println(failure)
+      case Success(success) => requestEvent.controllerActor ! ListResponseEvent(requestEvent, apply(success))
+      case Failure(failure) => ...
     }
   }
 }
 ```
+
+Now the execution returns back in the actor chain, as the original ControllerActor is sent back a ResponseEvent or ListResponseEvent:
 
 ## ControllerActor
 
@@ -91,22 +93,7 @@ def get(requestEvent: RequestEvent): Unit = {
         handleJson(m, response)
       }
     case response: ResponseEvent[T] =>
-      val negotiator = new MediaTypeNegotiator(response.req.cmd.ctx.request.headers)
-      val acceptedMediaRanges = negotiator.acceptedMediaRanges
-
-      implicit val formats = DefaultFormats
-      implicit val serialization = jackson.Serialization
-
-      //val m = Marshal(response.resource).to[RequestEntity]
-
-      val e = Extraction.decompose(response.resource).asInstanceOf[JObject]
-      val written = write(e)
-
-      if (negotiator.isAccepted(MediaTypes.`text/html`)) {
-        handleHtmlWithFallback(response, e)
-      } else if (negotiator.isAccepted(MediaTypes.`application/json`)) {
-        //handleJson(m,response)
-      }
+      ... // similar to ListResponseEvent
 
 
 
