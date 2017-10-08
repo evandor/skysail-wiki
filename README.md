@@ -20,9 +20,12 @@ We have some more things skysail could help you with:
 * **User Management**
 * **HTML Rendering** \(Template Engine\)
 * **Generic Client GUI**
+* **Prototyping**
 * and - **calling other APIs**
 
 A skysail backend does not only serve JSON to be used by some client, it creates a generic web GUI so that you can actually use and validate your implementation directly with a browser.
+
+Please check [this](/status.md) site for the current implementation status of the above features.
 
 Now, let's explain the main buzz-words from the definition above:
 

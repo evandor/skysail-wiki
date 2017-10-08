@@ -2,7 +2,7 @@
 
 There's a certain semantic in the way skysail defines endpoints for request processing, let's explain this with a little example of a note handling application with an entity "Note".
 
-The dots in the endpoint definition stand for "/&lt;application name&gt;/&lt;application version&gt;:
+The dots in the endpoint definition stand for "/&lt;application name&gt;/&lt;application version&gt;", so that the actual endpoint for the PutEntityServerResource would look like "https://&lt;server&gt;:&lt;port&gt;/notesapp/v1/notes/27/".
 
 | Endpoint | Resource Type | Verbs | Description |
 | :--- | :--- | :--- | :--- |
