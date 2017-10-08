@@ -1,10 +1,14 @@
 # Request Handling
 
+```
+http://helenaedelson.com/?p=879
+```
+
 ## RoutesCreator \(Actor\):
 
-Matches the request to a Handler via the requests URI, applying a series of common Directives \(to deal with authentication, content negotiation etc\).
+Matches the request to a Handler via the requests URI, applying a series of common Directives \(to deal with authentication, content negotiation etc\). If no route is created matching a specific URI, skysail will return the usual 404 response.
 
-If a match is found, a new _ProcessComand_ message is sent to the associated application actor:
+Otherwise, if a match is found, a new _ProcessComand_ message is sent to the associated application actor:
 
 ```scala
 val applicationActor = ... // get the application actor for the current Application
@@ -24,7 +28,7 @@ The _ProcessCommand_ is created using
 
 The _ApplicationActor_ handles the ProcessCommand created by the RoutesCreator:
 
-```
+```scala
 case cmd: ProcessCommand => {
   ...
   val theClass = cmd.resourceClass.newInstance()
@@ -49,7 +53,7 @@ A new SkysailContext object is sent to the newly created ControllerActor using
 
 Now its the newly created ControllerActors responsibility to match the request method and call the appropriate method on the resource class:
 
-```
+```scala
 cmd.ctx.request.method match {
   case HttpMethods.GET => resource.get(RequestEvent(cmd, self))
   case HttpMethods.PUT =>
@@ -78,22 +82,52 @@ Now the execution returns back in the actor chain, as the original ControllerAct
 
 ## ControllerActor
 
-    case response: ListResponseEvent[T] =>
-      val negotiator = new MediaTypeNegotiator(response.req.cmd.ctx.request.headers)
-      val acceptedMediaRanges = negotiator.acceptedMediaRanges
+Depending on the request's Accept-Header, the MediaTypeNegotiator is used to determine how to actually render the retrieved Response:
 
-      implicit val formats = DefaultFormats
-      implicit val serialization = jackson.Serialization
+```scala
+case response: ListResponseEvent[T] =>
+  val negotiator = new MediaTypeNegotiator(response.req.cmd.ctx.request.headers)
+  val acceptedMediaRanges = negotiator.acceptedMediaRanges
+  ...
+  val m = Marshal(response.resource.asInstanceOf[List[_]]).to[RequestEntity]
 
-      val m = Marshal(response.resource.asInstanceOf[List[_]]).to[RequestEntity]
+  if (negotiator.isAccepted(MediaTypes.`text/html`)) {
+    handleHtmlWithFallback(response, m)
+  } else if (negotiator.isAccepted(MediaTypes.`application/json`)) {
+    handleJson(m, response)
+  }
+case response: ResponseEvent[T] =>
+  ... // similar to ListResponseEvent
+```
 
-      if (negotiator.isAccepted(MediaTypes.`text/html`)) {
-        handleHtmlWithFallback(response, m)
-      } else if (negotiator.isAccepted(MediaTypes.`application/json`)) {
-        handleJson(m, response)
-      }
-    case response: ResponseEvent[T] =>
-      ... // similar to ListResponseEvent
+    Somewhere in handleXXX:
+
+    val answer = HttpEntity(ContentTypes.`text/html(UTF-8)`, <body>)
+    applicationActor ! response.copy(resource = response.resource, httpResponse = response.httpResponse.copy(entity = answer))
+
+So, the ResponseEvent is sent back up in the chain to the ApplicationActor:
+
+# ApplicationActor
+
+```scala
+val r = ... // the async result from calling the controller actor
+r onComplete {
+  case Success(value) => routesCreator ! value
+  case Failure(failure) => ...
+}
+```
+
+Finally, the RoutesCreator gets the response:
+
+# RoutesCreator
+
+```
+val t = ... // the async result from calling the application actor
+onComplete(t) {
+  case Success(result) => complete(result.httpResponse)
+  case Failure(failure) => ...; complete(StatusCodes.BadRequest, failure)
+}
+```
 
 
 
