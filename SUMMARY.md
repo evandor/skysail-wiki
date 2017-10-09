@@ -72,4 +72,5 @@
   * [twirl](twirl.md)
   * [gradle-twirl-plugin](experimental/gradle-twirl-plugin.md)
   * [akka](experimental/akka.md)
+    * [Actor Hierarchie](experimental/akka/actor-hierarchie.md)
 

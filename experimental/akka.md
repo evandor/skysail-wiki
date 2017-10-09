@@ -4,7 +4,7 @@
 http://helenaedelson.com/?p=879
 ```
 
-This 
+This
 
 ## ![](/assets/actors.png)
 
@@ -12,9 +12,9 @@ This
 
 ## RoutesCreator \(Actor\):
 
-Matches the request to a Handler via the requests URI, applying a series of common Directives \(to deal with authentication, content negotiation etc\). If no route is created matching a specific URI, skysail will return the usual 404 response.
+**Matches the request to a Handler** via the requests URI, applying a series of common Directives \(to deal with authentication, content negotiation etc\). If no route is created matching a specific URI, skysail will return the usual 404 response.
 
-Otherwise, if a match is found, a new _ProcessComand_ message is sent to the associated application actor:
+Otherwise, if a match is found, **a new **_**ProcessComand**_** message is sent to the associated application actor**:
 
 ```scala
 val applicationActor = ... // get the application actor for the current Application
