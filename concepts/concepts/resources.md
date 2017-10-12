@@ -2,6 +2,16 @@
 
 Resources play a crucial role in REST. Restlet, being the framework skysail builds upon, defines a class "_org.restlet.resource.ServerResource_" which should be extended to implement server-side resources. skysail extends this class with "_SkysailServerResource_" and resources in skysail typically extend the latter class.
 
+New approach:
+
+![](https://github.com/evandor/skysail-core/blob/newroutesapproach/skysail.core/src/io/skysail/core/resources/resources.png?raw=true)
+
+
+
+
+
+**@Deprecated**
+
 Restlet does not tell you how exactly your resources should look like, you have all the freedom, but you have to make up your mind yourself. skysails "SkysailServerResource" class is abstract and provides some default implementations:
 
 ![](/assets/skysailServerResources.png)
